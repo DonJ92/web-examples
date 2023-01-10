@@ -32,11 +32,11 @@ export const EIP155Metadata: NamespaceMetadata = {
   },
   "1718": {
     name: "Palette",
-    logo: BLOCKCHAIN_LOGO_BASE_URL + "eip155:1.png",
+    logo: BLOCKCHAIN_LOGO_BASE_URL + "eip155:1718.png",
     rgb: EIP155Colors.palette,
   },
   "102": {
-    logo: BLOCKCHAIN_LOGO_BASE_URL + "eip155:1.png",
+    logo: BLOCKCHAIN_LOGO_BASE_URL + "eip155:1718.png",
     rgb: EIP155Colors.palette,
   },
   "10": {
