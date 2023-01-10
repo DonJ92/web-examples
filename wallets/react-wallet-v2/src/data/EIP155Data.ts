@@ -19,6 +19,13 @@ export const EIP155_MAINNET_CHAINS = {
     rgb: '99, 125, 234',
     rpc: 'https://cloudflare-eth.com/'
   },
+  'eip155:1718': {
+    chainId: 1718,
+    name: 'Palette',
+    logo: '/chain-logos/eip155-1.png',
+    rgb: '137, 194, 247',
+    rpc: 'https://palette-mainnet.com:22000/'
+  },
   'eip155:43114': {
     chainId: 43114,
     name: 'Avalanche C-Chain',
@@ -49,6 +56,13 @@ export const EIP155_TEST_CHAINS = {
     logo: '/chain-logos/eip155-1.png',
     rgb: '99, 125, 234',
     rpc: 'https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'
+  },
+  'eip155:102': {
+    chainId: 102,
+    name: 'Palette TempNet',
+    logo: '/chain-logos/eip155-1.png',
+    rgb: '137, 194, 247',
+    rpc: 'https://tempnet-1.palette-rpc.com:22000'
   },
   'eip155:43113': {
     chainId: 43113,

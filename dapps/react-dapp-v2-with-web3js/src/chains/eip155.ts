@@ -11,6 +11,7 @@ import { BLOCKCHAIN_LOGO_BASE_URL } from "../constants";
 
 export const EIP155Colors = {
   ethereum: "99, 125, 234",
+  palette: "137, 194, 247",
   optimism: "233, 1, 1",
   goerli: "189, 174, 155",
   xdai: "73, 169, 166",
@@ -28,6 +29,15 @@ export const EIP155Metadata: NamespaceMetadata = {
   "5": {
     logo: BLOCKCHAIN_LOGO_BASE_URL + "eip155:5.png",
     rgb: EIP155Colors.goerli,
+  },
+  "1718": {
+    name: "Palette",
+    logo: BLOCKCHAIN_LOGO_BASE_URL + "eip155:1.png",
+    rgb: EIP155Colors.palette,
+  },
+  "102": {
+    logo: BLOCKCHAIN_LOGO_BASE_URL + "eip155:1.png",
+    rgb: EIP155Colors.palette,
   },
   "10": {
     name: "Optimism",

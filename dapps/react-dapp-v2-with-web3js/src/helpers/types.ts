@@ -1,4 +1,14 @@
-import { ChainsMap } from "caip-api";
+export interface ChainData {
+  name: string;
+  id: string;
+  rpc: string[];
+  slip44: number;
+  testnet: boolean;
+}
+
+export interface ChainsMap {
+  [reference: string]: ChainData;
+}
 
 export interface AssetData {
   symbol: string;
@@ -6,16 +16,16 @@ export interface AssetData {
   contractAddress?: string;
 }
 
-export interface ChainData {
-  name: string;
-  short_name: string;
-  chain: string;
-  network: string;
-  chain_id: number;
-  network_id: number;
-  rpc_url: string;
-  native_currency: AssetData;
-}
+// export interface ChainData {
+//   name: string;
+//   short_name: string;
+//   chain: string;
+//   network: string;
+//   chain_id: number;
+//   network_id: number;
+//   rpc_url: string;
+//   native_currency: AssetData;
+// }
 export interface TxData {
   from: string;
   to: string;

@@ -9,7 +9,8 @@ import {
 } from "react";
 
 import { Web3Modal } from "@web3modal/standalone";
-import { apiGetChainNamespace, ChainsMap } from "caip-api";
+import { apiGetChainNamespace } from "caip-api";
+import { ChainsMap } from "../helpers";
 import UniversalProvider from "@walletconnect/universal-provider";
 import Client from "@walletconnect/sign-client";
 import Web3 from "web3";
@@ -17,6 +18,7 @@ import { DEFAULT_LOGGER, DEFAULT_PROJECT_ID, DEFAULT_RELAY_URL } from "../consta
 import { utils } from "ethers";
 import { AccountBalances, ChainNamespaces, getAllChainNamespaces } from "../helpers";
 import { PairingTypes, SessionTypes } from "@walletconnect/types";
+import { EIP155Chains } from "../chains/chains";
 /**
  * Types
  */
@@ -76,7 +78,7 @@ export function ClientContextProvider({ children }: { children: ReactNode | Reac
       namespaces.map(async namespace => {
         let chains: ChainsMap | undefined;
         try {
-          chains = await apiGetChainNamespace(namespace);
+          chains = await getChainNamespace();
         } catch (e) {
           // ignore error
         }
@@ -366,4 +368,9 @@ export function useWalletConnectClient() {
     throw new Error("useWalletConnectClient must be used within a ClientContextProvider");
   }
   return context;
+}
+
+export function getChainNamespace(): ChainsMap {
+  const data  = EIP155Chains;
+  return data;
 }
